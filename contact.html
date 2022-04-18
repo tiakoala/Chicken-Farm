@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style>
+.topnav {
+  background-color: #bf4641;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #755e49;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #aa9275;
+  color: white;
+}
+
+</style>
+
+<title>Chicken Farm</title>
+
+    <body style ="background-image:url('https://wallpaperbat.com/img/109515-hd-farm-wallpaper.jpg');
+background-repeat:no-repeat"></body>
+    <h1 style="text-align:center;">Chicken Farm</h1>
+
+
+
+<div class="topnav">
+  <a href="chickenFarm.html">Home</a>
+  <a href="ourChickens.html">Our Chickens</a>
+  <a class="active" href="contact.html">Contact Us</a>
+  <a href="about.html">About</a>
+</div>
+
+
+ <form action="demo.php" method="post">
+        <label for="firstName">First name:</label><br>
+        <input type="text" maxLength="50" pattern="^[A-Za-z -]{1,50}$" name="firstName" id="firstName" required><br>
+        <label for="lastName">Last name:</label><br>
+        <input type="text" maxLength="50" pattern="^[A-Za-z -]{1,50}$" name="lastName" id="lastName" required><br>
+        <label for="emailAddress">Email:</label><br>
+        <input type="email" maxLength="50" pattern="^[A-Za-z0-9-_.@]{1,50}$" name="emailAddress" id="emailAddress"required><br>
+<label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required><br>
+<label for="paragraph">Reason for Contact:</label><br>
+<textarea name="paragraph" cols="50" rows="10" required></textarea>
+<br>
+
+ <input type="submit" value="Submit"> <input type="reset" value= "Reset">
+      </form>
+
+
+
+
+</html>
