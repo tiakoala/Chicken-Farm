@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
 <style>
 .topnav {
   background-color: #bf4641;
@@ -33,18 +35,22 @@
 background-repeat:no-repeat"></body>
     <h1 style="text-align:center;">Chicken Farm</h1>
 
-
-
 <div class="topnav">
-  <a href="chickenFarm.html">Home</a>
+  <a href="index.html">Home</a>
   <a href="ourChickens.html">Our Chickens</a>
   <a href="contact.html">Contact Us</a>
   <a href="about.html">About</a>
-  <a href="login.html">Login</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a class="active" href="login.html">Login</a>
 </div>
 
-<p style="font-size: 35px; text-align:center; background-color: #bf4641; width:200px; height:200px; margin:10px; padding:10px;">
-    <img src="TenderAfter.jpg" width="200" height="200">
-    </p>
+<form action="demo.php" method="post" style= "text-align:center; background-color: #bf4641; margin:10px; padding:10px;">
+    <label for="username">Username:</label><br>
+    <input type="text" maxLength="50" name="username" id="username" required><br>
+    <label for= "password">Password:</label><br>
+    <input type="password" maxLength="50" name="password" id="password" required><br>
+    <br>
+    <input type="submit" value="Submit"> <input type="reset" value= "Reset">
+      </form>
 
 </html>
