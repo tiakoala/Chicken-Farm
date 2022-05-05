@@ -47,7 +47,7 @@ background-repeat:no-repeat"></body>
 <div class="topnav">
 <a href="index.html">Home</a>
 <a href="ourChickens.html">Our Chickens</a>
-<a href="contact.html">Contact Us</a>
+<a href="contact.php">Contact Us</a>
 <a href="about.html">About</a>
 <a class = "active" href="dashboard.php">Dashboard</a>
 <a href="login.php">Login</a>
