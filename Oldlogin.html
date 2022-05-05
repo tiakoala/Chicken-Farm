@@ -39,16 +39,18 @@ background-repeat:no-repeat"></body>
   <a href="index.html">Home</a>
   <a href="ourChickens.html">Our Chickens</a>
   <a href="contact.html">Contact Us</a>
-  <a class="active" href="about.html">About</a>
+  <a href="about.html">About</a>
   <a href="dashboard.php">Dashboard</a>
-  <a href="login.php">Login</a>
+  <a class="active" href="login.php">Login</a>
 </div>
 
-<p style= "text-align:left; color: white; background-color: #bf4641; margin:10px; padding:10px;">
-  Goldshire Chicken Farm is a farm that farms chickens.<br>
-  To see more about how we take care of our chickens, click <a href="https://www.youtube.com/watch?v=jVdlxwX6A7g" style="color: black">here</a> to watch a trailer for a documentary. 
-</p>
-
-
+<form action="demo.php" method="post" style= "text-align:center; background-color: #bf4641; margin:10px; padding:10px;">
+    <label for="username">Username:</label><br>
+    <input type="text" maxLength="50" name="username" id="username" required><br>
+    <label for= "password">Password:</label><br>
+    <input type="password" maxLength="50" name="password" id="password" required><br>
+    <br>
+    <input type="submit" value="Submit"> <input type="reset" value= "Reset">
+      </form>
 
 </html>
