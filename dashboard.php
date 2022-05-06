@@ -81,29 +81,24 @@ background-repeat:no-repeat"></body>
     <th>Chicken ID</th>
     <th>Healthy</th> 
     <th>Food Consumed (lbs)</th>
-    <th>Eggs Laid</th>
   </tr>
-  <tr>
-    <td>1</td>
-    <td>False</td> 
-    <td>5.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>2</td> 
-    <td>True</td>
-    <td>2</td> 
-    <td>8</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>True</td>
-    <td>4.3</td>
-    <td>0</td>
-    
-    
-  </tr>
-  
+  <?php
+  require_once "config.php";
+  // Check connection
+  if ($link->connect_error) {
+  die("Connection failed: " . $link->connect_error);
+  }
+  $sql = "SELECT ChickenID, Healthy, FoodConsumed FROM Chicken";
+  $result = $link->query($sql);
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+  echo "<tr><td>" . $row["ChickenID"]. "</td><td>" . $row["Healthy"] . "</td><td>"
+  . $row["FoodConsumed"]. "</td></tr>";
+  }
+  echo "</table>";
+  } else { echo "0 results"; }
+  ?>
 </table>
 
 <table>
@@ -115,11 +110,19 @@ background-repeat:no-repeat"></body>
     <th>Clean?</th>
     
   </tr>
-  <tr>
-    <td>1</td>
-    <td>3</td> 
-    <td>True</td>
-  </tr>
+  <?php
+  $sql = "SELECT CoopID, numChickens, status_of_coop FROM Coops";
+  $result = $link->query($sql);
+  if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+  echo "<tr><td>" . $row["CoopID"]. "</td><td>" . $row["numChickens"] . "</td><td>"
+  . $row["status_of_coop"]. "</td></tr>";
+  }
+  echo "</table>";
+  } else { echo "0 results"; }
+  $link->close();
+  ?>
 </table>
 
 <table>
